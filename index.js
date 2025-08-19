@@ -9,7 +9,7 @@ let users = [
   { id: 2, name: "Vibhute", email: "vibhute@example.com" },
 ];
 
-app.get("/", (req, res) => {
+app.get("/get-data", (req, res) => {
   res.status(200).json({ message: "All data", data: users });
 });
 
