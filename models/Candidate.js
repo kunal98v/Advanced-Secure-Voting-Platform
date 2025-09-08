@@ -5,11 +5,24 @@ const CandidateSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  email: {
+  party: {
     type: String,
     required: true,
     unique: true,
-    lowercase: true,
+  },
+  isVoted : {
+    type : Boolean,
+    default : false,
+  },
+  votes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+  ],
+  voteCount: {
+    type: Number,
+    default: 0,
   },
 });
 

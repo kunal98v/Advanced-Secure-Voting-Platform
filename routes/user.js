@@ -1,12 +1,17 @@
 const express = require("express");
 const validate = require("../middleware/validate");
-const { signup, signin } = require("../controllers/UserAuthenticationController");
+const { signup, signin, getUsers, castVote } = require("../controllers/UserAuthenticationController");
+const voterAuth = require("../Middleware/voterAuth");
 
 const router = express.Router();
 
-router.use(validate); // middleware applied to all routes below 👇
+router.get("/get-users", getUsers)
+router.post("/vote/:id", voterAuth, castVote);
 
-router.post("/signup", signup);
-router.post("/signin", signin);
+router.post("/signup",validate, signup);
+router.post("/signin",validate, signin);
+
+
+
 
 module.exports = router;
