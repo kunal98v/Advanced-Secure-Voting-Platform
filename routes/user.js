@@ -4,7 +4,9 @@ const { signup, signin } = require("../controllers/UserAuthenticationController"
 
 const router = express.Router();
 
-router.post("/signup", validate, signup);
-router.post("/signin", validate, signin);
+router.use(validate); // middleware applied to all routes below 👇
+
+router.post("/signup", signup);
+router.post("/signin", signin);
 
 module.exports = router;
