@@ -7,6 +7,10 @@ const UserSchema = new mongoose.Schema({
     unique: true,
     lowercase: true,
   },
+  isVoted :{
+    type : Boolean,
+    default : false
+  },
   password: {
     type: String,
     required: true,

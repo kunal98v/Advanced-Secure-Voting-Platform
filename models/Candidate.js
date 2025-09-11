@@ -10,10 +10,6 @@ const CandidateSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  isVoted : {
-    type : Boolean,
-    default : false,
-  },
   votes: [
     {
       type: mongoose.Schema.Types.ObjectId,

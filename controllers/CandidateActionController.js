@@ -3,6 +3,13 @@ const Candidate = require("../models/Candidate");
 // add candidate
 const addCandidate = async (req, res) => {
   try {
+    const {name} = req.body;
+    const exists = await Candidate.findOne({name:name});
+    console.log(exists)
+    if (exists) {
+      return res.status(400).json({message : "Canidate with same name already exists !"})
+    }
+
     const candidate = new Candidate(req.body);
     await candidate.save();
     res.status(201).json({ message: "Candidate Created" });
