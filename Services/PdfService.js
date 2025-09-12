@@ -138,7 +138,8 @@ const generatePDF = async (req, res) => {
     console.log("📂 PDF saved at:", pdfPath);
     console.log("🌐 URL:", fileUrl);
 
-    return res.status(200).json({ url: fileUrl });
+    return pdfPath;
+
   } catch (err) {
     console.error("❌ Error:", err);
     res.status(500).json({ message: "Error generating PDF" });

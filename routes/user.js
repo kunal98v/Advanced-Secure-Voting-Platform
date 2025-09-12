@@ -1,8 +1,9 @@
 const express = require("express");
 const validate = require("../middleware/validate");
-const { signup, signin, getUsers, castVote, resetPassword} = require("../controllers/UserAuthenticationController");
+const { signup, signin, getUsers, resetPassword} = require("../controllers/UserAuthenticationController");
 const voterAuth = require("../Middleware/voterAuth");
 const authenticate = require("../middleware/auth");
+const {castVote} = require("../Controllers/VoteActionController");
 
 const router = express.Router();
 
@@ -13,8 +14,6 @@ router.post("/signup",validate, signup);
 router.post("/signin",validate, signin);
 
 router.post("/reset-password", authenticate, resetPassword)
-
-
 
 
 module.exports = router;
