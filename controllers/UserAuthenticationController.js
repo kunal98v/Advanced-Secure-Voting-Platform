@@ -79,7 +79,14 @@ const resetPassword = async (req, res) => {
 
 const getUsers = async (req, res) => {
   try {
-    const users = await User.find();
+    const page = req.query.page || 1;
+    const perPage = 3;
+    const skip = (page - 1) * perPage;
+
+    const users = await User.find()
+      .select("username isVoted role")
+      .limit(perPage)
+      .skip(skip);
 
     return res.status(200).json({ message: "Users Data", data: users });
   } catch (err) {

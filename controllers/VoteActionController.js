@@ -29,7 +29,7 @@ const castVote = async (req, res) => {
 
     return res
       .status(200)
-      .json({ message: "Vote Recorder Sucessfully!", data: user });
+      .json({ message: "Vote Recorded Sucessfully!", data: user });
   } catch (err) {
     res.status(400).json({ message: err.message });
   }

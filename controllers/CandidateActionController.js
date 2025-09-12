@@ -20,7 +20,7 @@ const addCandidate = async (req, res) => {
 
 // get candidates
 const getCandidates = async (req, res) => {
-  const data = await Candidate.find();
+  const data = await Candidate.find().sort({voteCount : -1}).select("name party voteCount");
   res.status(200).json({ data: data });
 };
 
