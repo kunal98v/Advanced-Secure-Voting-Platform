@@ -18,6 +18,4 @@ const sendSMS = async (to, message) => {
   }
 };
 
-sendSMS("+917738579164", "Baki saheb mazet na !");
-
 module.exports = { sendSMS };

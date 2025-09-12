@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const {sendSMS} = require("../Services/SMSSendService")
 
 const signup = async (req, res) => {
   try {
@@ -28,6 +29,8 @@ const signin = async (req, res) => {
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid Password" });
     }
+
+    // await sendSMS("to_phone_number", "Welcome to Election Commission Portal");
 
     const token = jwt.sign(
       { id: user._id, username: username, role: user.role },
