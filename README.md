@@ -1,6 +1,6 @@
 # Voting Application
 
-### 📌 Resume Project Summary – **Voting Application**
+### 📌 Project Summary – **Voting Application**
 
 **Online Voting Application** | *Node.js, Express, MongoDB, JWT, Mongoose, Nodemailer, Twilio, Puppeteer*
 
