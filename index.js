@@ -3,7 +3,7 @@ const app = express();
 require("dotenv").config()
 const connectDB = require("./config/db")
 const candidateRoutes = require("./routes/candidate");
-const pdfRoutes = require("./Routes/pdf");
+const pdfRoutes = require("./routes/pdf");
 const path = require("path");
 const userRoutes = require("./routes/user")
 const logger = require("./middleware/logger");
