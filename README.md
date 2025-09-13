@@ -14,60 +14,53 @@
 - Implemented **server-side pagination** for efficient data handling of candidates and votes.
 - Ensured **data security** with password hashing, JWT tokens, and middleware-based route protection.
 
-📝 Project Summary
+# 🗳️ Voting Application
 
-This application provides a secure and efficient platform for conducting online voting. It supports role-based access control, real-time vote tracking, email/SMS notifications, and administrative functionalities for managing candidates and votes.
+A secure **online voting platform** built with Node.js, Express, MongoDB, and modern authentication & notification technologies.
 
-Technologies Used:
+---
 
-Backend: Node.js, Express
+## 🚀 Project Summary
 
-Database: MongoDB, Mongoose
+This application provides a secure and efficient platform for conducting online voting. It supports **role-based access control**, real-time vote tracking, email/SMS notifications, and administrative functionalities for managing candidates and votes.
 
-Authentication & Security: JWT, bcrypt (password hashing), middleware-based route protection
+**Technologies Used:**  
+- **Backend:** Node.js, Express  
+- **Database:** MongoDB, Mongoose  
+- **Authentication & Security:** JWT, bcrypt, middleware-based route protection  
+- **Notifications:** Nodemailer (email with PDF certificate), Twilio (SMS)  
+- **PDF Generation:** Puppeteer  
+- **Other Features:** Server-side pagination, cron jobs for automated tasks
 
-Notifications: Nodemailer (email with PDF certificate), Twilio (SMS)
+---
 
-PDF Generation: Puppeteer
+## 🌟 Features
 
-Other Features: Server-side pagination, cron jobs for automated tasks
+- **User Management**:  
+  - Register and login users securely using JWT  
+  - Password reset with secure token flow  
 
-🚀 Features
+- **Voting System**:  
+  - Vote for candidates  
+  - Duplicate vote prevention  
+  - Real-time vote count  
 
-User Management
+- **Admin Features**:  
+  - Add, update, delete candidates  
+  - View all votes with pagination  
 
-Register and login users securely using JWT authentication
+- **Notifications**:  
+  - Welcome SMS via Twilio  
+  - Voting confirmation email with PDF certificate  
 
-Password reset with secure token-based flow
+- **Cron Jobs**:  
+  - Automated tasks for notifications and reports  
 
-Voting System
+- **Security Measures**:  
+  - Password hashing with bcrypt  
+  - JWT authentication  
+  - Middleware-based role access control  
 
-Users can vote for candidates
+---
 
-Duplicate voting prevention
 
-Real-time vote count tracking
-
-Admin Features
-
-Add, update, and delete candidates
-
-View all votes with pagination
-
-Notifications
-
-Send welcome SMS via Twilio
-
-Send voting confirmation email with PDF certificate via Nodemailer + Puppeteer
-
-Cron Jobs
-
-Automated tasks to handle notifications or reports (configurable)
-
-Security Measures
-
-Password hashing with bcrypt
-
-JWT authentication for route protection
-
-Middleware-based role access control
