@@ -62,5 +62,7 @@ This application provides a secure and efficient platform for conducting online 
   - Middleware-based role access control  
 
 ---
+© 2025 Kunal Vibhute. All rights reserved.  
+This code is private and may not be used, copied, or distributed without permission.
 
 
