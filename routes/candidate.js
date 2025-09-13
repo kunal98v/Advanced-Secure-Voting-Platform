@@ -1,5 +1,5 @@
 const express = require("express");
-const authenticate = require("../middleware/auth");
+const authenticate = require("../Middleware/auth");
 const { addCandidate, getCandidates, deleteCandidate, updateCandidate } = require("../Controllers/CandidateActionController");
 const checkAdmin = require("../Middleware/checkAdmin");
 
