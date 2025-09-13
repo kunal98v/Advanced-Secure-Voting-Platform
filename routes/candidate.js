@@ -1,7 +1,7 @@
 const express = require("express");
-const authenticate = require("../Middleware/auth");
-const { addCandidate, getCandidates, deleteCandidate, updateCandidate } = require("../Controllers/CandidateActionController");
-const checkAdmin = require("../Middleware/checkAdmin");
+const authenticate = require("../middleware/auth");
+const { addCandidate, getCandidates, deleteCandidate, updateCandidate } = require("../controllers/CandidateActionController");
+const checkAdmin = require("../middleware/checkAdmin");
 
 const router = express.Router()
 

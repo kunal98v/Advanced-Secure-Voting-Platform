@@ -1,9 +1,9 @@
 const express = require("express");
 const validate = require("../middleware/validate");
 const { signup, signin, getUsers, resetPassword} = require("../controllers/UserAuthenticationController");
-const voterAuth = require("../Middleware/voterAuth");
+const voterAuth = require("../middleware/voterAuth");
 const authenticate = require("../middleware/auth");
-const {castVote} = require("../Controllers/VoteActionController");
+const {castVote} = require("../controllers/VoteActionController");
 
 const router = express.Router();
 
