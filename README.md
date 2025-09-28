@@ -13,3 +13,56 @@
 - Developed **SMS notification service** using **Twilio** to send welcome messages upon voter sign-in.
 - Implemented **server-side pagination** for efficient data handling of candidates and votes.
 - Ensured **data security** with password hashing, JWT tokens, and middleware-based route protection.
+
+# 🗳️ Voting Application
+
+A secure **online voting platform** built with Node.js, Express, MongoDB, and modern authentication & notification technologies.
+
+---
+
+## 🚀 Project Summary
+
+This application provides a secure and efficient platform for conducting online voting. It supports **role-based access control**, real-time vote tracking, email/SMS notifications, and administrative functionalities for managing candidates and votes.
+
+**Technologies Used:**  
+- **Backend:** Node.js, Express  
+- **Database:** MongoDB, Mongoose  
+- **Authentication & Security:** JWT, bcrypt, middleware-based route protection  
+- **Notifications:** Nodemailer (email with PDF certificate), Twilio (SMS)  
+- **PDF Generation:** Puppeteer  
+- **Other Features:** Server-side pagination, cron jobs for automated tasks
+
+---
+
+## 🌟 Features
+
+- **User Management**:  
+  - Register and login users securely using JWT  
+  - Password reset with secure token flow  
+
+- **Voting System**:  
+  - Vote for candidates  
+  - Duplicate vote prevention  
+  - Real-time vote count  
+
+- **Admin Features**:  
+  - Add, update, delete candidates  
+  - View all votes with pagination  
+
+- **Notifications**:  
+  - Welcome SMS via Twilio  
+  - Voting confirmation email with PDF certificate  
+
+- **Cron Jobs**:  
+  - Automated tasks for notifications and reports  
+
+- **Security Measures**:  
+  - Password hashing with bcrypt  
+  - JWT authentication  
+  - Middleware-based role access control  
+
+---
+© 2025 Kunal Vibhute. All rights reserved.  
+This code is private and may not be used, copied, or distributed without permission.
+
+
