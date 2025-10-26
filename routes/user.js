@@ -1,19 +1,16 @@
 const express = require("express");
-const validate = require("../middleware/validate");
-const { signup, signin, getUsers, resetPassword} = require("../controllers/UserAuthenticationController");
-const voterAuth = require("../middleware/voterAuth");
-const authenticate = require("../middleware/auth");
-const {castVote} = require("../controllers/VoteActionController");
+const {UserAuthenticationController, VoteActionController} = require("../Controllers");
+const {limiter, voterAuth, validate, authenticate} = require("../Middleware");
 
 const router = express.Router();
 
-router.get("/get-users", getUsers)
-router.post("/vote/:id", voterAuth, castVote);
+router.get("/get-users",limiter, UserAuthenticationController.getUsers);
+router.post("/vote/:id", voterAuth, VoteActionController.castVote);
 
-router.post("/signup",validate, signup);
-router.post("/signin",validate, signin);
+router.post("/signup",validate, UserAuthenticationController.signup);
+router.post("/signin",validate, UserAuthenticationController.signin);
 
-router.post("/reset-password", authenticate, resetPassword)
+router.post("/reset-password", authenticate, UserAuthenticationController.resetPassword);
 
 
 module.exports = router;

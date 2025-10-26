@@ -3,7 +3,7 @@ const app = express();
 
 const request = require("supertest");
 const mongoose = require("mongoose");
-const User = require("../models/User");
+const User = require("../Models/User");
 
 beforeAll(async () => {
   // Connect to a test database
