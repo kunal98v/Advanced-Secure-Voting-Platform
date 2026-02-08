@@ -1,6 +1,6 @@
 const express = require("express");
-const { CandidateActionController } = require("../Controllers");
-const {limiter, authenticate, checkAdmin} = require("../Middleware");
+const { CandidateActionController } = require("../controllers");
+const {limiter, authenticate, checkAdmin} = require("../middleware");
 
 const router = express.Router()
 

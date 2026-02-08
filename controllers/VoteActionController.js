@@ -1,7 +1,7 @@
 
-const Candidate = require("../Models/Candidate");
+const Candidate = require("../models/Candidate");
 const { sendMail } = require("../Services/EmailSendService");
-const User = require("../Models/User");
+const User = require("../models/User");
 const { generatePDF } = require("../Services/PdfService");
 
 const castVote = async (req, res) => {

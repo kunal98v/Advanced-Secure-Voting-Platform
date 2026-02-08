@@ -1,5 +1,5 @@
 const express = require("express");
-const {authenticate} = require("../Middleware");
+const {authenticate} = require("../middleware");
 const {generatePDF} = require("../Services/PdfService")
 
 const router = express.Router()

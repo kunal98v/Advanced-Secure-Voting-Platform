@@ -1,6 +1,6 @@
 const express = require("express");
-const {UserAuthenticationController, VoteActionController} = require("../Controllers");
-const {limiter, voterAuth, validate, authenticate} = require("../Middleware");
+const {UserAuthenticationController, VoteActionController} = require("../controllers");
+const {limiter, voterAuth, validate, authenticate} = require("../middleware");
 
 const router = express.Router();
 
